@@ -2,7 +2,7 @@ package vo.hotelvo;
 
 import java.util.List;
 /**
- * 酒店基本信息vo
+ * 酒店基本信息vo 给酒店工作人员看的
  * @author CYF
  * @version 1.0
  */
