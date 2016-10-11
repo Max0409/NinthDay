@@ -1,10 +1,13 @@
 package po;
+
+import java.io.Serializable;
+
 /**
  * 获取当前用户的用户名和密码
  * @author CLL
  * @version 1.0
  */
-public class CilentPO {
+public class CilentPO implements Serializable{
 	private String userName;
 	private String password;
 	
