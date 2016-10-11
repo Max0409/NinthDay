@@ -1,5 +1,6 @@
 package po;
 
+import java.awt.Image;
 import java.io.Serializable;
 import java.util.List;
 
@@ -14,12 +15,14 @@ public class HotelBasicInfoPO implements Serializable {
 	private String hotelID;
 	// 酒店名
 	private String name;
+	//
+	//private Image hotelImage;
 	// 地址
 	private String address;
 	// 联系方式
 	private String telephone;
 	// 星级
-	private double star;
+	private int star;
 	// 评分
 	private double score;
 	// 最低价格
@@ -39,7 +42,7 @@ public class HotelBasicInfoPO implements Serializable {
 	// 住户点评
 	private List<RemarkPO> remarks;
 
-	public HotelBasicInfoPO(String hotelID, String name, String address, String telephone, double star, double score,
+	public HotelBasicInfoPO(String hotelID, String name, String address, String telephone, int star, double score,
 			double lowestPrice, String introduce, String commonFacility, String activityFacility, String service,
 			String roomFacility, List remarks) {
 		this.setHotelID(hotelID);
@@ -90,11 +93,11 @@ public class HotelBasicInfoPO implements Serializable {
 		this.telephone = telephone;
 	}
 
-	public double getStar() {
+	public int getStar() {
 		return star;
 	}
 
-	public void setStar(double star) {
+	public void setStar(int star) {
 		this.star = star;
 	}
 

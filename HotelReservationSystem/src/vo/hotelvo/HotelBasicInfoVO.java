@@ -1,5 +1,6 @@
 package vo.hotelvo;
 
+import java.awt.Image;
 import java.util.List;
 /**
  * 酒店基本信息vo 给酒店工作人员看的
@@ -12,6 +13,8 @@ public class HotelBasicInfoVO {
 	private String hotelID;
 	// 酒店名
 	private String hotelName;
+	//酒店照片
+	private Image hotelImage;
 	// 地址
 	private String address;
 	// 商圈
@@ -19,7 +22,7 @@ public class HotelBasicInfoVO {
 	// 联系方式
 	private String telephone;
 	// 星级
-	private double star;
+	private int star;
 	// 酒店简介
 	private String introduce;
 	// 通用设施
@@ -33,11 +36,12 @@ public class HotelBasicInfoVO {
 	// 合作企业
 	private String[] enterprises;
 
-	public HotelBasicInfoVO(String hotelID, String hotelName, String address, String businessArea, String telephone,
-			double star, String introduce, String commonFacility, String activityFacility, String service,
+	public HotelBasicInfoVO(String hotelID, String hotelName,Image hotelImage, String address, String businessArea, String telephone,
+			int star, String introduce, String commonFacility, String activityFacility, String service,
 			String roomFacility, String[] enterprises) {
 		this.setHotelID(hotelID);
 		this.setHotelName(hotelName);
+		this.setHotelImage(hotelImage);
 		this.setAddress(address);
 		this.setBusinessArea(businessArea);
 		this.setTelephone(telephone);
@@ -89,11 +93,11 @@ public class HotelBasicInfoVO {
 		this.telephone = telephone;
 	}
 
-	public double getStar() {
+	public int getStar() {
 		return star;
 	}
 
-	public void setStar(double star) {
+	public void setStar(int star) {
 		this.star = star;
 	}
 
@@ -143,6 +147,14 @@ public class HotelBasicInfoVO {
 
 	public void setEnterprises(String[] enterprises) {
 		this.enterprises = enterprises;
+	}
+
+	public Image getHotelImage() {
+		return hotelImage;
+	}
+
+	public void setHotelImage(Image hotelImage) {
+		this.hotelImage = hotelImage;
 	}
 
 }
