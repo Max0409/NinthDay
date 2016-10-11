@@ -1,31 +1,44 @@
 package common;
+
+import java.util.Map;
+
 /**
  * 网站特定商圈优惠策略
  * @author CLL
  *
  */
 public class WebSpecialAreaStrategy extends Strategy {
-	private double discount;
-	private String specialArea;
-	
+	private Map<String,Double> allDiscount;
+	/**
+	 * 初始化该商圈的折扣值
+	 * @param specialArea
+	 * @param discount
+	 */
 	public WebSpecialAreaStrategy(String specialArea,double discount){
-		this.specialArea=specialArea;
-		this.discount=discount;
+		allDiscount.put(specialArea, discount);
 	}
-
-	public double getDiscount() {
-		return discount;
+	/**
+	 * 返回该商圈的折扣值
+	 * @param specialArea
+	 * @return
+	 */
+	public double getDiscount(String specialArea) {
+		return allDiscount.get(specialArea);
 	}
-
-	public void setDiscount(double discount) {
-		this.discount = discount;
+	/**
+	 * 重新设置该商圈的折扣值
+	 * @param specialArea
+	 * @param discount
+	 */
+	public void setDiscount(String specialArea,double discount) {
+		allDiscount.remove(specialArea);
+		allDiscount.put(specialArea, discount);
 	}
-
-	public String getSpecialArea() {
-		return specialArea;
-	}
-
-	public void setSpecialArea(String specialArea) {
-		this.specialArea = specialArea;
+	/**
+	 * 返回所有商圈及其折扣值
+	 * @return
+	 */
+	public Map<String,Double> getAllDiscount(){
+		return allDiscount;
 	}
 }

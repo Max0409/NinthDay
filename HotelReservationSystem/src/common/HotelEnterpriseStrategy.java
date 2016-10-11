@@ -1,26 +1,20 @@
 package common;
+
+import java.util.Map;
+
 /**
  * 酒店企业特惠策略
  * @author CLL
  *
  */
 public class HotelEnterpriseStrategy extends Strategy {
-	private double discount;
 	private String hotelId;
-	private String enterpriseName;
+	//前者为企业名称,后者为该企业对应的折扣值
+	private Map<String,Double> discountPolicy;
 	
-	public HotelEnterpriseStrategy(String hotelId,String enterpriseName,double discount){
+	public HotelEnterpriseStrategy(String hotelId,Map<String,Double> discountPolicy){
 		this.hotelId=hotelId;
-		this.enterpriseName=enterpriseName;
-		this.discount=discount;
-	}
-
-	public double getDiscount() {
-		return discount;
-	}
-
-	public void setDiscount(double discount) {
-		this.discount = discount;
+		this.setDiscountPolicy(discountPolicy);
 	}
 
 	public String getHotelId() {
@@ -31,11 +25,13 @@ public class HotelEnterpriseStrategy extends Strategy {
 		this.hotelId = hotelId;
 	}
 
-	public String getEnterpriseName() {
-		return enterpriseName;
+	public Map<String,Double> getDiscountPolicy() {
+		return discountPolicy;
 	}
 
-	public void setEnterpriseName(String enterpriseName) {
-		this.enterpriseName = enterpriseName;
+	public void setDiscountPolicy(Map<String,Double> discountPolicy) {
+		this.discountPolicy = discountPolicy;
 	}
+
+
 }

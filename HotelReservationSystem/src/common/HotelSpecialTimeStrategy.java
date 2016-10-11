@@ -1,34 +1,21 @@
 package common;
+
+import java.util.Date;
+import java.util.Map;
+
 /**
  * 酒店特定时期特惠策略类
  * @author CLL
  *
  */
 public class HotelSpecialTimeStrategy extends Strategy {
-	private double discount;
-	private String specialTime;
 	private String hotelId;
+	//前者为特定日期，后者为当天对应的折扣值
+	private Map<Date,Double> discountPolicy;
 	
-	public HotelSpecialTimeStrategy(String hotelId,String specialTime,double discount){
+	public HotelSpecialTimeStrategy(String hotelId,Map<Date,Double> discountPolicy){
 		this.hotelId=hotelId;
-		this.specialTime=specialTime;
-		this.discount=discount;
-	}
-
-	public double getDiscount() {
-		return discount;
-	}
-
-	public void setDiscount(double discount) {
-		this.discount = discount;
-	}
-
-	public String getSpecialTime() {
-		return specialTime;
-	}
-
-	public void setSpecialTime(String specialTime) {
-		this.specialTime = specialTime;
+		this.discountPolicy=discountPolicy;
 	}
 
 	public String getHotelId() {
@@ -37,5 +24,13 @@ public class HotelSpecialTimeStrategy extends Strategy {
 
 	public void setHotelId(String hotelId) {
 		this.hotelId = hotelId;
+	}
+
+	public Map<Date,Double> getDiscountPolicy() {
+		return discountPolicy;
+	}
+
+	public void setDiscountPolicy(Map<Date,Double> discountPolicy) {
+		this.discountPolicy = discountPolicy;
 	}
 }

@@ -3,6 +3,8 @@ package vo.personnelvo;
 import java.util.ArrayList;
 
 import javax.swing.ImageIcon;
+
+import common.Strategy;
 /**
  * 网站营销人员详细信息的vo类，职责为实现逻辑层和界面层之间网站营销人员详细信息的交互
  * @author CLL
@@ -20,13 +22,13 @@ public class WebMarketManDetailVO {
 	//用户编号
 	private String id;
 	//制定过的策略列表
-	private ArrayList<String> strategies;
+	private ArrayList<Strategy> strategies;
 	
 	public WebMarketManDetailVO(){
 		
 	}
 	
-	public WebMarketManDetailVO(ImageIcon userImage,String name,String telephone,String password,String id,ArrayList<String> strategies){
+	public WebMarketManDetailVO(ImageIcon userImage,String name,String telephone,String password,String id,ArrayList<Strategy> strategies){
 		this.setUserImage(userImage);
 		this.setName(name);
 		this.setTelephone(telephone);
@@ -75,11 +77,11 @@ public class WebMarketManDetailVO {
 		this.id = id;
 	}
 
-	public ArrayList<String> getStrategies() {
+	public ArrayList<Strategy> getStrategies() {
 		return strategies;
 	}
 
-	public void setStrategies(ArrayList<String> strategies) {
+	public void setStrategies(ArrayList<Strategy> strategies) {
 		this.strategies = strategies;
 	}
 }

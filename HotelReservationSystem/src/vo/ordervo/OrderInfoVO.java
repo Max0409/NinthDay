@@ -2,6 +2,7 @@ package vo.ordervo;
 
 import java.util.ArrayList;
 
+import common.Children;
 import common.OrderState;
 import common.Strategy;
 /**
@@ -43,7 +44,7 @@ public class OrderInfoVO {
 	//入住人数
 	private int lodgerNum;
 	//有无儿童
-	private boolean hasChild;
+	private Children children;
 	//生成订单时间（年月日时分）
 	private String orderTime;
 	//最晚入住时间（年月日时分）
@@ -55,7 +56,7 @@ public class OrderInfoVO {
 	
 	public OrderInfoVO(String orderId,String customerName,double price,ArrayList<Strategy> strategies,
 			String lodgerName,String lodgerTel,String expectCheckInTime,String expectCheckOutTime,
-			String roomType,int roomNum,int lodgerNum,boolean hasChild,String actualCheckInTime,
+			String roomType,int roomNum,int lodgerNum,Children children,String actualCheckInTime,
 			String actualCheckOutTime,String orderTime,OrderState orderState,String hotelName,
 			String hotelTel,String latestCheckInTime){
 		this.orderId=orderId;
@@ -69,7 +70,7 @@ public class OrderInfoVO {
 		this.setRoomType(roomType);
 		this.setRoomNum(roomNum);
 		this.setLodgerNum(lodgerNum);
-		this.setHasChild(hasChild);
+		this.setChildren(children);
 		this.actualCheckInTime=actualCheckInTime;
 		this.actualCheckOutTime=actualCheckOutTime;
 		this.orderTime=orderTime;
@@ -223,12 +224,12 @@ public class OrderInfoVO {
 		this.lodgerNum = lodgerNum;
 	}
 
-	public boolean isHasChild() {
-		return hasChild;
+	public Children getChildren() {
+		return children;
 	}
 
-	public void setHasChild(boolean hasChild) {
-		this.hasChild = hasChild;
+	public void setChildren(Children children) {
+		this.children = children;
 	}
 
 	
