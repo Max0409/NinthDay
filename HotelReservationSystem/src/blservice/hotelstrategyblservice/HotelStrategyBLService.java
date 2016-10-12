@@ -1,6 +1,7 @@
 package blservice.hotelstrategyblservice;
 
 
+import common.HotelStrategyType;
 import common.ResultMessage;
 import vo.hotelstrategyvo.HotelBestStrVO;
 import vo.hotelstrategyvo.HotelStrVO;
@@ -23,12 +24,12 @@ public interface HotelStrategyBLService {
 	
 	/**
 	 * 获取特定类型的酒店策略
-	 * @param hotelID String型,type String 型，传递酒店编号和策略类型
+	 * @param hotelID String型,type HotelStrategyType 型，传递酒店编号和策略类型
 	 * @return HotelStrVO ，将特定酒店策略返回给界面或order模块
 	 * @throws 未定
 	 *
 	 */
-	public HotelStrVO getHotelStrategy(String hotelID,String type);
+	public HotelStrVO getHotelStrategy(String hotelID,HotelStrategyType type);
 	
 	/**
 	 * 保存酒店策略信息

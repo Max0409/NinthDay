@@ -1,6 +1,7 @@
 package blservice.orderblservice;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 import common.ResultMessage;
 import vo.ordervo.OrderInfoVO;
@@ -35,12 +36,12 @@ public interface OrderBLService {
 	
 	/**
 	 * 检查输入的入住日期的格式
-	 * @param time String型，传递入住日期
+	 * @param time Date型，传递入住日期
 	 * @return ResultMessage，格式正确返回SUCCESS,格式错误返回DATAFORMATERROR,
 	 * @throws 未定
 	 *
 	 */
-	public ResultMessage checkTime(String time);
+	public ResultMessage checkTime(Date time);
 	
 	/**
 	 * 新增订单信息
@@ -103,7 +104,7 @@ public interface OrderBLService {
 	 * @throws 未定
 	 *
 	 */
-	public ResultMessage setCheckinTime(String time);
+	public ResultMessage setCheckinTime(Date time);
 	
 	/**
 	 * 保存订单实际退房时间
@@ -112,7 +113,7 @@ public interface OrderBLService {
 	 * @throws 未定
 	 *
 	 */
-	public ResultMessage setCheckoutTime(String time);
+	public ResultMessage setCheckoutTime(Date time);
 	
 	/**
 	 * 增加顾客订单总价全部或二分之一的信用值

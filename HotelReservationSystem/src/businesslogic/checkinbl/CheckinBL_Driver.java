@@ -1,5 +1,6 @@
 package businesslogic.checkinbl;
 
+import blservice.checkinblservice.CheckinBLService;
 import vo.checkinvo.AvailableRoomInfoVO;
 import vo.checkinvo.CheckinInfoVO;
 import vo.checkinvo.OrderInfoVO;
@@ -10,7 +11,7 @@ import vo.checkinvo.OrderInfoVO;
  *
  */
 public class CheckinBL_Driver {
-	public void drive(CheckinBL_Stub stub){
+	public void drive(CheckinBLService stub){
 		OrderInfoVO orderInfoVO=stub.getOrderInfo("201610120001000001");
 		CheckinInfoVO checkinInfoVO=stub.getCheckinInfo("201610120001000001");
 		System.out.println(stub.checkIDLength(""));

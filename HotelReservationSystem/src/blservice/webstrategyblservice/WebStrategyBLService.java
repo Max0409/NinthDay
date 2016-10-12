@@ -2,7 +2,11 @@ package blservice.webstrategyblservice;
 
 
 
+import java.util.Date;
+
 import common.ResultMessage;
+import common.TradingArea;
+import common.WebStrategyType;
 import vo.webstrategyvo.GradeRuleVO;
 import vo.webstrategyvo.WebBestStrVO;
 import vo.webstrategyvo.WebStrVO;
@@ -15,12 +19,12 @@ import vo.webstrategyvo.WebStrVO;
 public interface WebStrategyBLService {
 	/**
 	 * 获取最佳网站策略
-	 * @param credit String型,area String型,time String型，传递策略所需的信用值商圈和时间
+	 * @param credit String型,area TradingArea型,time String型，传递策略所需的信用值商圈和时间
 	 * @return WebBestStrVO ，将最佳网站策略返回给界面或order模块
 	 * @throws 未定
 	 *
 	 */
-	public WebBestStrVO getWebBestStrategy(String credit,String area,String time);
+	public WebBestStrVO getWebBestStrategy(String credit,TradingArea area,Date time);
 	
 	/**
 	 * 获取会员等级规则
@@ -33,12 +37,12 @@ public interface WebStrategyBLService {
 	
 	/**
 	 * 获取网站策略
-	 * @param type String型，传递策略类型
+	 * @param type WebStrategyType型，传递策略类型
 	 * @return WebStrVO ，将网站策略返回给界面或order模块
 	 * @throws 未定
 	 *
 	 */
-	public WebStrVO getWebStrategy(String type);
+	public WebStrVO getWebStrategy(WebStrategyType type);
 	
 	
 	/**

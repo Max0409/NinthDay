@@ -1,4 +1,4 @@
-package dataservice.datafactory;
+package dataservice.datafactoryservice;
 
 import dataservice.availableroomdataservice.AvailableRoomDataService;
 import dataservice.checkindataservice.CheckinDataService;
@@ -11,7 +11,7 @@ import dataservice.searchhoteldataservice.SearchHotelDataService;
 import dataservice.userdataservice.UserDataService;
 import dataservice.webstrategydataservice.WebStrategyDataService;
 
-public interface DataFactory {
+public interface DataFactoryService {
 	public UserDataService getUserDataImpl();
 	public PersonnelDataService getPersonnelDataImpl();
 	public OrderDataService getOrderDataImpl();

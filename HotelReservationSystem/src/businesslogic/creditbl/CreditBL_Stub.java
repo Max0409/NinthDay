@@ -30,7 +30,7 @@ public class CreditBL_Stub implements CreditBLService{
 	}
 
 	@Override
-	public ResultMessage confirmCreditDeposit(double money) {
+	public ResultMessage confirmCreditDeposit(double money,String customerName) {
 		// TODO Auto-generated method stub
 		return ResultMessage.SUCCESS;
 	}

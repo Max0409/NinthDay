@@ -21,7 +21,7 @@ public interface UserBLService {
 	 * @throws 未定
 	 *
 	 */
-	public ResultMessage Login(String name ,String password);
+	public ResultMessage login(String name ,String password);
 	
 	/**
 	 * 获取用户详细信息
@@ -48,7 +48,7 @@ public interface UserBLService {
 	 * @throws 未定
 	 *
 	 */
-	public ResultMessage Confirm(DetailInfoVO detailInfoVO);
+	public ResultMessage confirmUserInfo(DetailInfoVO detailInfoVO);
 	
 	/**
 	 * 检查密码是否正确

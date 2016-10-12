@@ -2,7 +2,8 @@ package blservice.searchhotelblservice;
 
 import java.util.ArrayList;
 
-
+import common.HotelSortType;
+import common.OrderState;
 import vo.searchhotelvo.HotelListVO;
 /**
  * SearchHotelBLService提供接口，用来对酒店的搜索浏览
@@ -22,20 +23,20 @@ public interface SearchHotelBLService {
 	
 	/**
 	 * 获取特定类型的酒店列表
-	 * @param type String型，传递列表类型 
+	 * @param type HotelSortType型，传递列表类型 
 	 * @return  ArrayList<HotelListVO> ，将特定类型的酒店列表返回给界面
 	 * @throws 未定
 	 *
 	 */
-	public ArrayList<HotelListVO> getSortedHotelList(String type);
+	public ArrayList<HotelListVO> getSortedHotelList(HotelSortType type);
 	
 	/**
 	 * 获取特定类型的预定过的酒店列表
-	 * @param type String型，传递列表类型 
+	 * @param type HotelSortType型,orderState OrderState型，传递列表类型 
 	 * @return  ArrayList<HotelListVO> ，将特定类型的预定过的酒店列表返回给界面
 	 * @throws 未定
 	 *
 	 */
-	public ArrayList<HotelListVO> getBookedHotelList(String type);
+	public ArrayList<HotelListVO> getBookedHotelList(HotelSortType type,OrderState orderState);
 
 }
