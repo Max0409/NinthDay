@@ -1,5 +1,6 @@
 package businesslogic.creditbl;
 
+import blservice.creditblservice.CreditBLService;
 import vo.creditvo.CreditInfoVO;
 import vo.creditvo.CreditVO;
 
@@ -9,11 +10,11 @@ import vo.creditvo.CreditVO;
  *
  */
 public class CreditBL_Driver {
-	public void drive(CreditBL_Stub stub){
+	public void drive(CreditBLService stub){
 		CreditInfoVO creditInfoVO=stub.getCreditInfo("000001");
 		System.out.println(stub.addCredit(new CreditVO()));
 		System.out.println(stub.cutCredit(new CreditVO()));
-		System.out.println(stub.confirmCreditDeposit(10));
+		System.out.println(stub.confirmCreditDeposit(10,"csy"));
 	}
 	
 	public static void main(String[] args){
