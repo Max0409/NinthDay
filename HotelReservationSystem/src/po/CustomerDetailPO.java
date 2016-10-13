@@ -30,6 +30,10 @@ public class CustomerDetailPO implements Serializable{
 	//密码
 	private String password;
 	
+	public CustomerDetailPO(){
+		
+	}
+	
 	/**
 	 * 普通会员po的构造函数
 	 * @param customerId
