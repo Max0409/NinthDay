@@ -16,6 +16,9 @@ public class HotelWorkerListPO implements Serializable {
 	
 	private ArrayList<HotelWorkerDetailPO>	HotelWorkerListPO;
 	//酒店工作人员具体信息
+	public HotelWorkerListPO(){
+		
+	}
 	public HotelWorkerListPO( ArrayList	<HotelWorkerDetailPO>HotelWorkerListPO){
 		this.HotelWorkerListPO= HotelWorkerListPO;
 		

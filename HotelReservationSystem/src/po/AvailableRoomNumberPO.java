@@ -15,6 +15,9 @@ public class AvailableRoomNumberPO  implements Serializable{
 	 
 	private int hotelnumber;//  记录酒店编号
 	private Map<String,int[]> orderedroonnumber;//记录房间类型和30天预订客房
+	public AvailableRoomNumberPO(){
+		
+	}
 	public AvailableRoomNumberPO(int hotelnumber,Map<String,int[]> orderedroonnumber){
 		this.orderedroonnumber=orderedroonnumber;
 		this.hotelnumber=hotelnumber;

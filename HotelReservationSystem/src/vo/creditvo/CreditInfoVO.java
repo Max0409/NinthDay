@@ -14,6 +14,8 @@ public class CreditInfoVO {
 	private String customernumber;//用户编号
 	private int credit;//当前信用值
 	private ArrayList<String> creditinfo;//信用记录
+	public CreditInfoVO(){
+	}
 	public CreditInfoVO(String name,String customernumber,int credit,ArrayList<String> creditinfo){
 		this.name=name;
 		this.customernumber=customernumber;

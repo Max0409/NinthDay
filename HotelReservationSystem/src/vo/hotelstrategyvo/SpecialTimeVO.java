@@ -1,6 +1,6 @@
 package vo.hotelstrategyvo;
 
-
+import java.util.Date;
 
 public class SpecialTimeVO {
    /**
@@ -9,25 +9,25 @@ public class SpecialTimeVO {
     */
 	
 	
-	private String starttime;//开始时间
-	private String endtime;//结束时间
+	private Date starttime;//开始时间
+	private Date endtime;//结束时间
 	private int sale;//折扣值
-	public SpecialTimeVO(String starttime,String endtime,int sale){
+	public SpecialTimeVO(Date starttime,Date endtime,int sale){
 		this.endtime=endtime;
 		this.starttime=starttime;
 		this.sale=sale;
 		
 	}
-	public String getStarttime() {
+	public Date getStarttime() {
 		return starttime;
 	}
-	public void setStarttime(String starttime) {
+	public void setStarttime(Date starttime) {
 		this.starttime = starttime;
 	}
-	public String getEndtime() {
+	public Date getEndtime() {
 		return endtime;
 	}
-	public void setEndtime(String endtime) {
+	public void setEndtime(Date endtime) {
 		this.endtime = endtime;
 	}
 	public int getSale() {

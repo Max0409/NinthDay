@@ -1,5 +1,9 @@
 package vo.checkinvo;
 
+import java.util.Date;
+
+import common.BedType;
+
 public class CheckinInfoVO {
 	/**
 	 * 酒店入住信息（CheckinInfoPO）
@@ -19,20 +23,23 @@ public class CheckinInfoVO {
 	private String ID;//身份证号（数字
 	private String tel;//联系方式（11位手机号）
 	private int roomnumber;//房间号（数字
-	private String roomtype;//房间类型
-	private String checkintime;//实际入住时间（-年-月-日-时-分）
-	private String checkouttime;//实际退房时间（-年-月-日-时-分）
+	private BedType bedtype;//房间类型
+	private Date checkintime;//实际入住时间（-年-月-日-时-分）
+	private Date checkouttime;//实际退房时间（-年-月-日-时-分）
 	private String hotelnumber;//酒店编号
 	private String ordernumber;//订单号
 	
-	public CheckinInfoVO( String costumername,String ID, String tel,int roomnumber, String roomtype,
-			String checkintime, String checkouttime,String hotelnumber, String ordernumber){
+	public CheckinInfoVO(){
+		
+	}
+	public CheckinInfoVO( String costumername,String ID, String tel,int roomnumber, BedType bedtype,
+			Date checkintime, Date checkouttime,String hotelnumber, String ordernumber){
 		
 		this.costumername=costumername;
 		this. ID= ID;
 		this.tel=tel;
 		this.roomnumber=roomnumber;
-		this.roomtype=roomtype;
+		this.bedtype=bedtype;
 		this.checkintime=checkintime;
 		this.checkouttime=checkouttime;
 		this.hotelnumber=hotelnumber;
@@ -67,22 +74,22 @@ public class CheckinInfoVO {
 	public void setRoomnumber(int roomnumber) {
 		this.roomnumber = roomnumber;
 	}
-	public String getRoomtype() {
-		return roomtype;
+	public BedType getRoomtype() {
+		return bedtype;
 	}
 	public void setRoomtype(String roomtype) {
-		this.roomtype = roomtype;
+		this.bedtype = bedtype;
 	}
-	public String getCheckintime() {
+	public Date getCheckintime() {
 		return checkintime;
 	}
-	public void setCheckintime(String checkintime) {
+	public void setCheckintime(Date checkintime) {
 		this.checkintime = checkintime;
 	}
-	public String getCheckouttime() {
+	public Date getCheckouttime() {
 		return checkouttime;
 	}
-	public void setCheckouttime(String checkouttime) {
+	public void setCheckouttime(Date checkouttime) {
 		this.checkouttime = checkouttime;
 	}
 	public String getHotelnumber() {

@@ -1,23 +1,25 @@
 package vo.hotelstrategyvo;
 
+import common.HotelStrategyType;
+
 public class OrderProvidedVO {
 	/**
 	 *订单优惠信息 
 	 *@author Cy
 	 */
-	private String  Strname;//优惠名字
+	private HotelStrategyType Strname;//优惠名字
 	private int sale;//优惠折扣值
-	public OrderProvidedVO(String  Strname,int sale){
+	public OrderProvidedVO(HotelStrategyType  Strname,int sale){
 		this.sale=sale;
 		this.Strname=Strname;
 		
 		
 	}
 	
-	public String getStrname() {
+	public HotelStrategyType getStrname() {
 		return Strname;
 	}
-	public void setStrname(String strname) {
+	public void setStrname(HotelStrategyType strname) {
 		Strname = strname;
 	}
 	public int getSale() {

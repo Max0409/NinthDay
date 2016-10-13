@@ -16,6 +16,10 @@ public class CreditPO  implements Serializable{
 	private int credit;//当前信用值
 
 	
+	public CreditPO(){
+		
+		
+	}
 	public CreditPO(String name,String customernumber,int credit){
 		this.name=name;
 		this.customernumber=customernumber;

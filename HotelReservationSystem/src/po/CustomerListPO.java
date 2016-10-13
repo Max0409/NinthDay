@@ -9,7 +9,9 @@ public class CustomerListPO implements Serializable {
 	 *  @author Cy
 	 */
 	private ArrayList<CustomerDetailPO>	CustomerListPO;//存放顾客的具体信息
-	
+	public CustomerListPO(){
+		
+	}
 	public CustomerListPO(ArrayList<CustomerDetailPO>	CustomerListPO){
 		this.CustomerListPO=CustomerListPO;
 	}

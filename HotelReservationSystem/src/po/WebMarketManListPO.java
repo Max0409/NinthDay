@@ -11,6 +11,9 @@ public class WebMarketManListPO implements Serializable{
 	
 	
 private ArrayList<WebMarketManDetailPO >WebMarketManListPO;//酒店工作人员的具体信息
+    public WebMarketManListPO(){
+    	
+    }
     public WebMarketManListPO(ArrayList <WebMarketManDetailPO >WebMarketManListPO){
     	this.WebMarketManListPO=WebMarketManListPO;
     	

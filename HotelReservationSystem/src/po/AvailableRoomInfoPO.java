@@ -2,6 +2,8 @@ package po;
 
 import java.io.Serializable;
 
+import common.BedType;
+
 public class AvailableRoomInfoPO implements Serializable {
 	/**
 	 * 当前可用客房信息（AvailableroomPO)
@@ -11,11 +13,15 @@ public class AvailableRoomInfoPO implements Serializable {
 	 * */
 	private int  hotelnumber;//酒店编号
 	private String[] roomtype;//房型
-	private String[] bedtype;//床型
+	private BedType[] bedtype;//床型
 	private double[] originalprice;//原始价格
 	private double[] lowestprice;//最低价格
 	private int[] originalnumbers;//各房型总数量
 	private int[] avalablenumbers;//可用客房信息
+	
+	public AvailableRoomInfoPO(){
+		
+	}
 	
 	public AvailableRoomInfoPO(int hotelnumber,String[] roomtype,String[] bednumber,double[] originalprice,double[] lowestprice
 			,int[] originalnumbers,int[] avalablenumbers){
@@ -43,11 +49,11 @@ public class AvailableRoomInfoPO implements Serializable {
 	public void setRoomtype(String[] roomtype) {
 		this.roomtype = roomtype;
 	}
-	public String[] getBedtype() {
+	public BedType[] getBedtype() {
 		return bedtype;
 	}
 
-	public void setBedtype(String[] bedtype) {
+	public void setBedtype(BedType[] bedtype) {
 		this.bedtype = bedtype;
 	}
 	public double[] getOriginalprice() {

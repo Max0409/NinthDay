@@ -15,6 +15,9 @@ public class AvailableRoomNumberVO  implements Serializable{
 	 
 	private String hotelname;//酒店名字
 	private Map<String,int[]> orderedroonnumber;//房间类型和未来30天可用数量
+	public AvailableRoomNumberVO(){
+		
+	}
 	public AvailableRoomNumberVO(String hotelname,Map<String,int[]> orderedroonnumber){
 		this.orderedroonnumber=orderedroonnumber;
 		this.hotelname=hotelname;

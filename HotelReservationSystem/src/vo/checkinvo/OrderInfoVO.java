@@ -1,5 +1,7 @@
 package vo.checkinvo;
 
+import java.util.Date;
+
 public class OrderInfoVO {
 	
 	
@@ -22,11 +24,13 @@ public class OrderInfoVO {
 		private String tel;//入住人的联系电话
 		private String hotelname;//酒店名称
 		private String ordertime;//下单时间
-		private String checkintime;//实际入住时间
-		private String checkouttime;//实际离开时间
-		
+		private Date checkintime;//实际入住时间
+		private Date checkouttime;//实际离开时间
+		public  OrderInfoVO(){
+			
+		}
 		public  OrderInfoVO(String ordernumber, String username,String customername,String tel
-				,String hotelname,String ordertime,String checkintime,String checkouttime){
+				,String hotelname,String ordertime,Date checkintime,Date checkouttime){
 			this.ordernumber=ordernumber;
 			this.username=username;
 			this.customername=customername;
@@ -75,16 +79,16 @@ public class OrderInfoVO {
 	public void setOrdertime(String ordertime) {
 		this.ordertime = ordertime;
 	}
-	public String getCheckintime() {
+	public Date getCheckintime() {
 		return checkintime;
 	}
-	public void setCheckintime(String checkintime) {
+	public void setCheckintime(Date checkintime) {
 		this.checkintime = checkintime;
 	}
-	public String getCheckouttime() {
+	public Date getCheckouttime() {
 		return checkouttime;
 	}
-	public void setCheckouttime(String checkouttime) {
+	public void setCheckouttime(Date checkouttime) {
 		this.checkouttime = checkouttime;
 	}
 	

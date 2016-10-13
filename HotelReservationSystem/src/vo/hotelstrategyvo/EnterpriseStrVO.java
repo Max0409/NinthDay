@@ -1,6 +1,7 @@
 
 package vo.hotelstrategyvo;
 
+import common.TradingArea;
 
 /**
  * 特殊商圈策略
@@ -9,17 +10,17 @@ package vo.hotelstrategyvo;
  *
  */
 public class EnterpriseStrVO {
-	private String place;//商圈
+	 private TradingArea place;//商圈
 	int sale; // 折扣值
-	public  EnterpriseStrVO(String place,int sale){
+	public  EnterpriseStrVO(TradingArea place,int sale){
 		this.place=place;
 		this.sale=sale;
 	}
 	
-	public String getPlace() {
+	public TradingArea getPlace() {
 		return place;
 	}
-	public void setPlace(String place) {
+	public void setPlace(TradingArea place) {
 		this.place = place;
 	}
 	public int getSale() {

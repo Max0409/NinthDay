@@ -14,7 +14,9 @@ public class CreditVO  implements Serializable{
 	private String customernumber;//用户编号
 	private int credit;//当前信用值
 
-	
+	public CreditVO(){
+		
+	}
 	public CreditVO(String name,String customernumber,int credit){
 		this.name=name;
 		this.customernumber=customernumber;
